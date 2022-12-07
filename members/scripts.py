@@ -1,7 +1,6 @@
-import streamlink
+import youtube_dl
 
-
-def twitchLink(link):
-    streams = streamlink.streams(link)
-    best = streams["best"].to_url()
-    return best
+def youtube(link):
+    with youtube_dl.YoutubeDL({}) as ydl:
+        return ydl.extract_info(link,download=False)
+    
