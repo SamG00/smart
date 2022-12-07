@@ -31,7 +31,7 @@ def marker(request):
     except:
         c = 0
     try:
-        name = scripts.twitchLink(l)
+        name = scripts.youtube(l)
     except:
         name = ''
     member = Markers(name=n, desc=d, link=name,
